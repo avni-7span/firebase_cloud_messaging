@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "998158972085",
+    "project_id": "push-notification-724b0",
+    "storage_bucket": "push-notification-724b0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:998158972085:android:8080e0ecc7789bb629fafc",
+        "android_client_info": {
+          "package_name": "com.avni.notification"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLw0WRWQG6A2ZDJDWpTpdACexWScj4B3c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
