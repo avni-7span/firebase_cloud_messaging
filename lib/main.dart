@@ -11,9 +11,10 @@ final navigatorKey = GlobalKey<NavigatorState>();
 @pragma('vm:entry-point')
 Future<void> _firebaseMessagingBackgroundHandler(RemoteMessage message) async {
   await Firebase.initializeApp();
-  FirebaseMessaging.instance.getInitialMessage().then(handleMessage);
+  handleMessage(message);
 }
 
+/// terminated
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
