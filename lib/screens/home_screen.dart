@@ -12,8 +12,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-    NotificationService.instance.listenForForegroundNotification();
-    NotificationService.instance.listenForBackgroundNotification();
+    listenForNotifications();
   }
 
   @override
@@ -30,5 +29,10 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
       ),
     );
+  }
+
+  Future<void> listenForNotifications() async {
+    await NotificationService.instance.listenForForegroundNotification();
+    await NotificationService.instance.listenForBackgroundNotification();
   }
 }
