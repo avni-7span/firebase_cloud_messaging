@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:push_notification/services/notification_service.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  @override
+  void initState() {
+    super.initState();
+    NotificationService.instance.listenForForegroundNotification();
+    NotificationService.instance.listenForBackgroundNotification();
+  }
 
   @override
   Widget build(BuildContext context) {
